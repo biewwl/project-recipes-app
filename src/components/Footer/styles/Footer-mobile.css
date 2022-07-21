@@ -1,0 +1,56 @@
+@media screen and ( max-width : 425px ) {
+
+  footer {
+    background-color: var(--secondaryColor);
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+    justify-items: center;
+  }
+
+  footer .drinks-button, footer .foods-button {
+    align-items: center;
+    background: none;
+    border: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    padding: 0 10px;
+  }
+
+  footer .drinks-button svg, footer .foods-button svg {
+    font-size: 1.5em;
+  }
+
+  .container-explore {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  footer .explore-button {
+    background-color: var(--primaryColor);
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    transform: translateY(-20px);
+    position: absolute;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    top: 0;
+  }
+
+  footer .explore-button svg {
+    color: white;
+    font-size: 2em;
+  }
+}

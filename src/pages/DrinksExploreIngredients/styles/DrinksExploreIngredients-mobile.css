@@ -1,0 +1,26 @@
+@media screen and ( max-width : 425px ) {
+
+  .drinks-explore-ingredients {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 100vh;
+    padding: 60px 10px;
+  }
+
+  .drinks-explore-ingredients button {
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 0.5em;
+    padding: 10px;
+  }
+
+  .drinks-explore-ingredients button img {
+    width: 90%;
+  }
+
+  .drinks-explore-ingredients button h5 {
+    color: #444;
+    margin: 10px 0;
+  }
+}

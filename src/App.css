@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: chocolate;
+  src: url('./fonts/chocolate_5/Chocolate.ttf');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: product sans;
+  src: url('./fonts/product-sans/Product\ Sans\ Regular.ttf');
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes toTop {
+
+  0% {
+    opacity: 0%;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@keyframes toBottom {
+
+  0% {
+    opacity: 0%;
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes toLeft {
+
+  0% {
+    opacity: 0%;
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes toRight {
+
+  0% {
+    opacity: 0%;
+    transform: translateX(-10px);
   }
-  to {
-    transform: rotate(360deg);
+
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
   }
+}
+
+* {
+  font-family: product sans, sans-serif;
+  font-weight: 100;
 }

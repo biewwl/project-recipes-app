@@ -1,0 +1,11 @@
+@media screen and ( max-width : 425px ) {
+
+  .foods select {
+    border: 1px solid #eee;
+    border-radius: 25px;
+    margin: 20px 0;
+    outline: none;
+    padding: 10px;
+    width: 80vw;
+  }
+}

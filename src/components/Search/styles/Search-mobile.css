@@ -1,0 +1,48 @@
+@media screen and ( max-width : 425px ) {
+
+  .search {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    width: 90vw;
+  }
+
+  .search input {
+    border: 1px solid var(--primaryColor);
+    border-radius: 25px;
+    font-size: 0.8em;
+    margin: 5px;
+    padding: 8px;
+  }
+
+  .search input [ type = 'radio' ] {
+    margin-right: 5px;
+  }
+
+  .search label {
+    align-items: center;
+    display: flex;
+    font-size: 0.8em;
+  }
+
+  .search input:focus {
+    border: 1px solid var(--primaryColor);
+    outline: none;
+  }
+
+  .search button {
+    align-self: center;
+    background-color: var(--primaryColor);
+    border: 0;
+    border-radius: 25px;
+    color: white;
+    margin: 10px 0;
+    padding: 5px 10px;
+  }
+
+  .search button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+    opacity: 0.2;
+  }
+}

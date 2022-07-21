@@ -1,0 +1,48 @@
+@media screen and ( max-width : 425px ) {
+
+  header {
+    align-items: center;
+    background-color: var(--secondaryColor);
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    box-shadow: 0 3px 0 var(--primaryColor);
+    display: grid;
+    font-weight: 100;
+    grid-template-columns: 0.4fr 1fr 0.4fr;
+    height: 50px;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+  }
+
+  header .profile-button {
+    background: none;
+    border: none;
+    justify-self: flex-start;
+    padding: 0 10px;
+  }
+
+  header h1 {
+    align-self: center;
+    color: white;
+    font-size: 1.15em;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+  }
+
+  header .profile-button svg, header .search-button svg {
+    font-size: 1.3em;
+    color: white;
+  }
+
+  header .search-button {
+    background: none;
+    border: none;
+    justify-self: flex-end;
+    padding: 0 10px;
+  }
+}

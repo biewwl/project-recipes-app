@@ -1,0 +1,83 @@
+@keyframes toRight {
+
+  0% {
+    opacity: 0%;
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+
+@keyframes toLeft {
+
+  0% {
+    opacity: 0%;
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+
+@media screen and ( max-width : 425px ) {
+
+  .foods-explore {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-around;
+    padding: 80px 0;
+  }
+
+  .foods-explore button {
+    align-items: center;
+    animation: toRight 1s;
+    background-color: #eee;
+    border: 1px solid rgb(222, 222, 222);
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+  }
+
+  .foods-explore button:nth-child( 2 ) {
+    animation: toLeft 1s;
+    flex-direction: row-reverse;
+  }
+
+  .foods-explore span {
+    color: #444;
+    padding: 10px;
+    width: 50%;
+  }
+
+  .foods-explore .image-ingredient {
+    background-image: url('../images/ingredients.jpg');
+    background-size: cover;
+    border-radius: 0.5em;
+    height: 25vw;
+    width: 40vw;
+  }
+
+  .foods-explore .image-nationality {
+    background-image: url('../images/nationality.jpg');
+    background-size: cover;
+    border-radius: 0.5em;
+    height: 25vw;
+    width: 40vw;
+  }
+
+  .foods-explore .image-surprise {
+    background-image: url('../images/surprise.jpg');
+    background-size: cover;
+    border-radius: 0.5em;
+    height: 25vw;
+    width: 40vw;
+  }
+}
