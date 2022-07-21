@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/project-recipes-app/static/css/main.f45ec1e1.css",
+    "main.js": "/project-recipes-app/static/js/main.f9be76db.js",
+    "static/media/ingredients.jpg": "/project-recipes-app/static/media/ingredients.d204b989ab7885a50586.jpg",
+    "static/media/nationality.jpg": "/project-recipes-app/static/media/nationality.10c226c14240ec9d0cb9.jpg",
+    "static/media/recipes-wallpaper.jpeg": "/project-recipes-app/static/media/recipes-wallpaper.0a4403d43ce64ff367f3.jpeg",
+    "static/media/food-card.jpg": "/project-recipes-app/static/media/food-card.bb052ae469ae43cdc1e4.jpg",
+    "static/media/surprise.jpg": "/project-recipes-app/static/media/surprise.3c9265cfa4ec70154f53.jpg",
+    "static/media/Chocolate.ttf": "/project-recipes-app/static/media/Chocolate.0cdcd521c4a64386180b.ttf",
+    "static/media/Product Sans Regular.ttf": "/project-recipes-app/static/media/Product Sans Regular.d165384076551a756b3c.ttf",
+    "static/media/shareIcon.svg": "/project-recipes-app/static/media/shareIcon.87def1bd1dff9af9263f046c3b9bd31a.svg",
+    "static/media/blackHeartIcon.svg": "/project-recipes-app/static/media/blackHeartIcon.083cb006913d197c95857ebfa2161db7.svg",
+    "index.html": "/project-recipes-app/index.html",
+    "main.f45ec1e1.css.map": "/project-recipes-app/static/css/main.f45ec1e1.css.map",
+    "main.f9be76db.js.map": "/project-recipes-app/static/js/main.f9be76db.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f45ec1e1.css",
+    "static/js/main.f9be76db.js"
+  ]
+}
