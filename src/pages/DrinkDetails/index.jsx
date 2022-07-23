@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import { Icon } from '@iconify/react';
-import PropTypes from 'prop-types';
-import { useHistory } from 'react-router-dom';
-import lS from 'manager-local-storage';
-import { fetchDrinkDetails } from '../../helpers/fetchDrinks';
-import checkLS from '../../helpers/checkLocalStorage';
-import RecommendationCard from '../../components/RecommendationCard';
-import './styles/DrinkDetails-mobile.css';
-import getIngredients from '../../helpers/getAllIngredients';
-import { getDrinkProgress } from '../../helpers/getRecipeProgress';
-import favoriteRecipe from '../../helpers/favoriteRecipe';
+import React, { useEffect, useState } from "react";
+import { Icon } from "@iconify/react";
+import PropTypes from "prop-types";
+import { useHistory } from "react-router-dom";
+import lS from "manager-local-storage";
+import { fetchDrinkDetails } from "../../helpers/fetchDrinks";
+import checkLS from "../../helpers/checkLocalStorage";
+import RecommendationCard from "../../components/RecommendationCard";
+import "./styles/DrinkDetails-mobile.css";
+import getIngredients from "../../helpers/getAllIngredients";
+import { getDrinkProgress } from "../../helpers/getRecipeProgress";
+import favoriteRecipe from "../../helpers/favoriteRecipe";
 
-const copy = require('clipboard-copy');
+const copy = require("clipboard-copy");
 
 function DrinkDetails({
   match: {
@@ -22,7 +22,7 @@ function DrinkDetails({
 
   const [drinkDetails, setDrinkDetails] = useState([]);
   const [drinkIngredients, setDrinkIngredients] = useState([]);
-  const [statusRecipe, setStatusRecipe] = useState('notStarted');
+  const [statusRecipe, setStatusRecipe] = useState("notStarted");
   const [linkCopied, setLinkCopied] = useState(false);
   const [isFavorite, setIsFavorite] = useState(false);
 
@@ -30,8 +30,10 @@ function DrinkDetails({
     checkLS();
 
     const statusFavoriteRecipe = () => {
-      const favoriteRecipes = lS('g', 'favoriteRecipes');
-      const checkFavorite = favoriteRecipes.some((favorite) => favorite.id === id);
+      const favoriteRecipes = lS("g", "favoriteRecipes");
+      const checkFavorite = favoriteRecipes.some(
+        (favorite) => favorite.id === id
+      );
       setIsFavorite(checkFavorite);
     };
     statusFavoriteRecipe();
@@ -54,13 +56,13 @@ function DrinkDetails({
   };
 
   const handleFavorite = () => {
-    setIsFavorite(favoriteRecipe(drinkDetails[0], 'drink', isFavorite));
+    setIsFavorite(favoriteRecipe(drinkDetails[0], "drink", isFavorite));
   };
 
   const handleStart = () => {
     history.push(`/drinks/${id}/in-progress`);
-    const inProgressRecipes = lS('g', 'inProgressRecipes');
-    lS('s', 'inProgressRecipes', {
+    const inProgressRecipes = lS("g", "inProgressRecipes");
+    lS("s", "inProgressRecipes", {
       ...inProgressRecipes,
       cocktails: {
         ...inProgressRecipes.cocktails,
@@ -73,27 +75,23 @@ function DrinkDetails({
     <article className="drink-details">
       {drinkDetails.map(
         ({ strDrinkThumb, strDrink, strAlcoholic, strInstructions }, index) => (
-          <div key={ index }>
+          <div key={index}>
             <button
               className="back-button"
               type="button"
-              onClick={ () => history.push('/drinks') }
+              onClick={() => history.push("/drinks")}
             >
               <Icon icon="line-md:arrow-small-left" />
             </button>
-            <img
-              src={ strDrinkThumb }
-              className="recipe-photo"
-              alt="recipe"
-            />
+            <img src={strDrinkThumb} className="recipe-photo" alt="recipe" />
             <div className="share-and-favorites">
-              <button type="button" onClick={ handleShare }>
+              <button type="button" onClick={handleShare} className="share-btn">
                 {linkCopied && <Icon icon="line-md:confirm" />}
                 {!linkCopied && <Icon icon="line-md:external-link" />}
               </button>
               <button
                 type="button"
-                onClick={ handleFavorite }
+                onClick={handleFavorite}
                 className="favorite-btn"
               >
                 {isFavorite && <Icon icon="line-md:heart-filled" />}
@@ -107,9 +105,7 @@ function DrinkDetails({
             <div className="ingredients">
               <ul>
                 {drinkIngredients.map((ingredient, i) => (
-                  <li key={ i }>
-                    {ingredient}
-                  </li>
+                  <li key={i}>{ingredient}</li>
                 ))}
               </ul>
             </div>
@@ -119,16 +115,16 @@ function DrinkDetails({
             </div>
             <RecommendationCard page="drinks" />
           </div>
-        ),
+        )
       )}
-      {statusRecipe !== 'done' && (
+      {statusRecipe !== "done" && (
         <button
           className="start-recipe-btn"
           type="button"
-          onClick={ handleStart }
+          onClick={handleStart}
         >
           <span>
-            {statusRecipe === 'notStarted' ? 'Start Recipe' : 'Continue Recipe'}
+            {statusRecipe === "notStarted" ? "Start Recipe" : "Continue Recipe"}
           </span>
           <Icon icon="bx:play-circle" />
         </button>

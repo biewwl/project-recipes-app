@@ -46,7 +46,6 @@ function DoneAndFavoriteRecipes({ page }) {
         <button
           type="button"
           name="food"
-          data-testid="filter-by-food-btn"
           onClick={handleFilter}
           className="filter-btn"
         >

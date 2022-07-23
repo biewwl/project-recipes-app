@@ -61,7 +61,7 @@ function CardDoneFavoriteRecipe({
                 ? `${nationality} - ${category}`
                 : alcoholicOrNot}
             </span>
-            <span>{doneDate}</span>
+            {page === 'done' && <span>{doneDate}</span>}
             <section className="tags-section">
               {page === "done" &&
                 tags.map((tag, i) => <span key={i}>{tag}</span>)}
@@ -75,7 +75,8 @@ function CardDoneFavoriteRecipe({
             onClick={handleShare}
             className="share-btn"
           >
-            {linkCopied ? <span>Link copied!</span> : <span>Share</span>}
+            {!linkCopied && <Icon icon="line-md:external-link" />}
+            {linkCopied && <span>Link copied!</span>}
           </button>
           {page === "favorite" && (
             <button
