@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import lS from 'manager-local-storage';
-import './styles/Login-mobile.css';
+import './styles/Login.css';
 
 function Login() {
   const history = useHistory();

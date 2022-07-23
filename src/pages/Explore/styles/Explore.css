@@ -1,0 +1,50 @@
+@keyframes toTop {
+  0% {
+    opacity: 0%;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+.explore {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+  padding: 80px 20px;
+  grid-gap: 40px;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.explore-foods,
+.explore-drinks {
+  align-items: flex-end;
+  animation: toTop 1s;
+  background-image: url("../images/food-card.jpg");
+  background-size: cover;
+  border: none;
+  border-radius: 1em;
+  box-shadow: 0 4px 0 var(--secondaryColor), 0 0 5px rgb(225, 225, 225);
+  display: flex;
+  height: 200px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.explore-foods span,
+.explore-drinks span {
+  background-color: var(--secondaryColor);
+  border-radius: 0 0 1em 1em;
+  color: white;
+  padding: 5px 20px;
+  width: 100%;
+}
+
+.explore-drinks {
+  background-image: url("../images/drink-card.jpeg");
+}

@@ -9,6 +9,7 @@ import fetchFoods, {
   fetchFoodsByCategory,
   fetchFoodsCategories,
 } from '../../helpers/fetchFoods';
+import './styles/Foods.css';
 import './styles/Foods-mobile.css';
 
 function Foods({ page }) {
@@ -59,6 +60,9 @@ function Foods({ page }) {
     <div>
       <article className="foods">
         <Header title={ page } />
+        {page !== 'Explore Nationalities' && (
+          <h1 className="desktop-title-page">Foods</h1>
+        )}
         { page !== 'Explore Nationalities' && (
           <section className="categories">
             <button
@@ -79,14 +83,16 @@ function Foods({ page }) {
             ))}
           </section>
         )}
-        {fetchResult.map(({ strMealThumb, strMeal, idMeal }, index) => (
-          <Link key={ index } to={ `/foods/${idMeal}` }>
-            <Card
-              img={ strMealThumb }
-              title={ strMeal }
-            />
-          </Link>
-        ))}
+        <section className="recipes">
+          {fetchResult.map(({ strMealThumb, strMeal, idMeal }, index) => (
+            <Link key={ index } to={ `/foods/${idMeal}` }>
+              <Card
+                img={ strMealThumb }
+                title={ strMeal }
+              />
+            </Link>
+          ))}
+        </section>
       </article>
       <Footer />
     </div>

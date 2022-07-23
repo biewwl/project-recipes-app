@@ -1,0 +1,68 @@
+.foods {
+  padding: 50px 0;
+}
+
+.desktop-title-page {
+  padding: 40px;
+  color: var(--primaryColor);
+  font-size: 2em;
+}
+
+.foods .recipes {
+  justify-items: center;
+  display: grid;
+  grid-gap: 20px;
+  padding: 0 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.foods .categories {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  padding: 20px 40px;
+  width: 100%;
+  justify-items: center;
+}
+
+.foods .categories button {
+  background-color: #eee;
+  border: none;
+  border-radius: 25px;
+  color: #444;
+  font-size: 0.7em;
+  padding: 5px 1px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.foods .categories button:first-child {
+  background-color: white;
+  border: 2px solid #eee;
+  padding: 5px 1px;
+}
+
+.foods a {
+  text-decoration: none;
+}
+
+.foods .card {
+  box-shadow: 0 0 3px #c6c6c6;
+  margin: 2.5vw 0;
+  width: 200px;
+}
+
+.foods .card h5 {
+  color: #444;
+  overflow: hidden;
+  padding: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.foods .card img {
+  height: 80%;
+  object-fit: cover;
+  width: 100%;
+}

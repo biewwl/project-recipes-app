@@ -8,6 +8,7 @@ import fetchDrinks, {
   fetchDrinksByCategory,
   fetchDrinksCategories,
 } from '../../helpers/fetchDrinks';
+import './styles/Drinks.css';
 import './styles/Drinks-mobile.css';
 
 function Drinks() {
@@ -58,6 +59,7 @@ function Drinks() {
     <div>
       <article className="drinks">
         <Header title="Drinks" />
+        <h1 className="desktop-title-page">Drinks</h1>
         <section className="categories">
           <button
             className="btn btn-success"
@@ -78,14 +80,16 @@ function Drinks() {
             </button>
           ))}
         </section>
-        {fetchResult.map(({ strDrinkThumb, strDrink, idDrink }, index) => (
-          <Link key={ index } to={ `drinks/${idDrink}` }>
-            <Card
-              img={ strDrinkThumb }
-              title={ strDrink }
-            />
-          </Link>
-        ))}
+        <section className="recipes">
+          {fetchResult.map(({ strDrinkThumb, strDrink, idDrink }, index) => (
+            <Link key={ index } to={ `drinks/${idDrink}` }>
+              <Card
+                img={ strDrinkThumb }
+                title={ strDrink }
+              />
+            </Link>
+          ))}
+        </section>
       </article>
       <Footer />
     </div>
