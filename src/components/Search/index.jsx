@@ -50,6 +50,7 @@ function Search() {
         type="search"
         value={ query }
         onChange={ handleChangeQuery }
+        placeholder="Search for a recipe..."
       />
 
       <label htmlFor="ingredient">

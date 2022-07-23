@@ -1,168 +1,171 @@
 :root {
-
   --redPrimary: #ba2a2a;
 
   --redSecondary: #e25656;
 }
 
-@media screen and ( max-width : 425px ) {
+.food-progress {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-weight: 100;
+  background-image: url("../../../patterns/i-like-food.svg");
+}
 
-  .food-progress {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    font-weight: 100;
-  }
+.food-progress .back-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.5em;
+  background: #fff;
+  border-bottom-right-radius: 25px;
+  border: none;
+  padding: 10px;
+  color: var(--redPrimary);
+  cursor: pointer;
+}
 
-  .food-progress .back-button {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 1.5em;
-    background: #fff;
-    border-bottom-right-radius: 25px;
-    border: none;
-    padding: 10px;
-    color: var(--redSecondary);
-    cursor: pointer;
-  }
+.food-progress > div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgb(225, 225, 225);
+}
 
-  .food-progress > div {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 50px;
-  }
+.food-progress .recipe-photo {
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+  box-shadow: 0 5px 0 var(--redPrimary), 0 10px 0 var(--redSecondary);
+  margin-bottom: 20px;
+  height: 50vh;
+  object-fit: cover;
+  width: 100%;
+}
 
-  .food-progress .recipe-photo {
-    border-bottom-left-radius: 1em;
-    border-bottom-right-radius: 1em;
-    box-shadow: 0 5px 0 var(--redPrimary) , 0 10px 0 var(--redSecondary);
-    margin-bottom: 20px;
-    height: 50vh;
-    object-fit: cover;
-    width: 100vw;
-  }
+.food-progress .title-and-category {
+  padding: 40px 30px 20px;
+  width: 100%;
+}
 
-  .food-progress .title-and-category {
-    padding: 40px 30px 20px;
-    width: 100vw;
-  }
+.food-progress h2 {
+  color: #444;
+  font-weight: 100;
+}
 
-  .food-progress h2 {
-    color: #444;
-    font-weight: 100;
-  }
+.food-progress h4 {
+  color: var(--redPrimary);
+  font-size: 0.8em;
+  font-style: italic;
+  font-weight: 100;
+}
 
-  .food-progress h4 {
-    color: var(--redPrimary);
-    font-size: 0.8em;
-    font-style: italic;
-    font-weight: 100;
-  }
+.food-progress .share-and-favorites {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  justify-content: flex-end;
+  padding: 10px;
+  position: absolute;
+  top: 46vh;
+}
 
-  
-  .food-progress .share-and-favorites {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100vw;
-    justify-content: flex-end;
-    padding: 10px;
-    position: absolute;
-    top: 46vh;
-  }
-  
-  .food-progress .share-and-favorites button {
-    margin: 6px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: none;
-    background-color: white;
-    color: var(--redSecondary);
-    box-shadow: 0 0 5px rgb(201, 201, 201);
-    font-size: 1em;
-  }
+.food-progress .share-and-favorites button {
+  margin: 6px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: white;
+  color: var(--redSecondary);
+  box-shadow: 0 0 5px rgb(201, 201, 201);
+  font-size: 1em;
+  cursor: pointer;
+}
 
-  .food-progress .start-recipe-btn span {
-    margin: 0 5px;
-  }
+.food-progress .start-recipe-btn span {
+  margin: 0 5px;
+}
 
-  .food-progress .start-recipe-btn svg {
-    font-size: 1.5em;
-    margin: 0 5px;
-  }
+.food-progress .start-recipe-btn svg {
+  font-size: 1.5em;
+  margin: 0 5px;
+}
 
-  .food-progress .share-and-favorites button span {
-    margin: 0 5px;
-  }
+.food-progress .share-and-favorites button span {
+  margin: 0 5px;
+}
 
-  .food-progress .share-and-favorites button svg {
-    font-size: 1.3em;
-    margin: 0 5px;
-  }
+.food-progress .share-and-favorites button svg {
+  font-size: 1.3em;
+  margin: 0 5px;
+}
 
-  .food-progress .ingredients {
-    background-color: var(--redSecondary);
-    border: none;
-    border-radius: 0.5em;
-    color: white;
-    font-family: sans-serif;
-    font-size: 0.8em;
-    margin: 20px 0;
-    padding: 20px 0;
-    width: 100vw;
-  }
+.food-progress .ingredients {
+  background-color: var(--redSecondary);
+  border: none;
+  border-radius: 0.5em;
+  color: white;
+  font-family: sans-serif;
+  font-size: 0.8em;
+  margin: 20px 0;
+  padding: 20px 0;
+  width: 100%;
+}
 
-  .food-progress .ingredients ul {
-    line-height: 1.8em;
-    list-style: none;
-    padding: 5px 40px;
-  }
+.food-progress .ingredients ul {
+  line-height: 1.8em;
+  list-style: none;
+  padding: 5px 40px;
+}
 
-  .food-progress .ingredients label {
-    align-items: center;
-    display: flex;
-  }
+.food-progress .ingredients label {
+  align-items: center;
+  display: flex;
+}
 
-  .food-progress .ingredients input {
-    margin-right: 10px;
-  }
+.food-progress .ingredients input {
+  margin-right: 10px;
+}
 
-  .food-progress .instructions {
-    color: #444;
-    font-weight: 100;
-    padding: 30px;
-    width: 100vw;
-  }
+.food-progress .instructions {
+  color: #444;
+  font-weight: 100;
+  padding: 30px;
+  width: 100%;
+}
 
-  .food-progress .instructions h5 {
-    padding: 10px 0 20px 0;
-    font-weight: 800;
-    color: #444;
-  }
+.food-progress .instructions h5 {
+  padding: 10px 0 20px 0;
+  font-weight: 800;
+  color: #444;
+}
 
-  .food-progress .instructions p {
-    font-size: 0.8em;
-  }
+.food-progress .instructions p {
+  font-size: 0.8em;
+}
 
-  .food-progress .finish-recipe-btn {
-    align-items: center;
-    background-color: var(--redPrimary);
-    border: none;
-    border-radius: 25px;
-    bottom: 0;
-    color: white;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-    padding: 10px;
-    position: fixed;
-    width: 90vw;
-  }
+.food-progress .finish-recipe-btn {
+  align-items: center;
+  background-color: var(--redPrimary);
+  border: none;
+  border-radius: 25px;
+  bottom: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  position: fixed;
+  width: 90%;
+  max-width: 200px;
+  cursor: pointer;
+}
 
-  .food-progress .finish-recipe-btn:disabled {
-    opacity: 0;
-  }
-
+.food-progress .finish-recipe-btn:disabled {
+  opacity: 0;
 }

@@ -1,4 +1,4 @@
-@media screen and ( max-width : 425px ) {
+/* @media screen and ( max-width : 425px ) { */
 
   .profile {
     align-items: center;
@@ -30,6 +30,7 @@
     text-align: center;
     text-decoration: none;
     width: 60%;
+    max-width: 200px;
   }
 
   .profile a:first-child {
@@ -48,5 +49,6 @@
     border: none;
     color: #444;
     padding: 10px 20px;
+    cursor: pointer;
   }
-}
+/* } */

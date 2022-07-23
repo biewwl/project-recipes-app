@@ -26,15 +26,6 @@
 
 @media screen and ( max-width : 425px ) {
 
-  .foods-explore {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: space-around;
-    padding: 80px 0;
-  }
-
   .foods-explore button {
     align-items: center;
     animation: toRight 1s;

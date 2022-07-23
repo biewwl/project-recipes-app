@@ -1,37 +1,5 @@
-@media screen and ( max-width : 425px ) {
-
-  .done-favorites-recipes {
-    padding-top: 60px;
-  }
-
-  .done-favorites-recipes .filters {
-    display: grid;
-    grid-column-gap: 10px;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 10px;
-  }
-
-  .done-favorites-recipes .filters button {
-    background-color: var(--primaryColor);
-    border: 2px solid var(--primaryColor);
-    border-radius: 25px;
-    color: white;
-    font-size: 0.7em;
-    padding: 5px;
-  }
-
-  .done-favorites-recipes .filters button:first-child {
-    background: none;
-    border: 2px solid var(--primaryColor);
-    color: var(--primaryColor);
-  }
-
-  .card-done-recipe {
-    background-color: rgb(246, 246, 246);
-    border-radius: 0.5em;
-    display: flex;
-    justify-content: space-between;
-    margin: 10px;
-    padding: 5px;
+@media screen and (max-width: 425px) {
+  .done-favorites {
+    padding: 40px 10px;
   }
 }

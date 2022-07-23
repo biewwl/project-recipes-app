@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import lS from 'manager-local-storage';
-import { Link } from 'react-router-dom';
-import shareIcon from '../../images/shareIcon.svg';
-import './styles/CardDoneRecipe-mobile.css';
-import like from '../../images/blackHeartIcon.svg';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import lS from "manager-local-storage";
+import { Link } from "react-router-dom";
+import shareIcon from "../../images/shareIcon.svg";
+import "./styles/CardDoneRecipe-mobile.css";
+import like from "../../images/blackHeartIcon.svg";
+import { Icon } from "@iconify/react";
 
-const copy = require('clipboard-copy');
+const copy = require("clipboard-copy");
 
 function CardDoneFavoriteRecipe({
   id,
@@ -25,15 +26,16 @@ function CardDoneFavoriteRecipe({
   const [linkCopied, setLinkCopied] = useState(false);
 
   const handleShare = () => {
-    const link = page === 'done'
-      ? window.location.href.replace(
-        'done-recipes',
-        `${type === 'food' ? 'foods' : 'drinks'}/${id}`,
-      )
-      : window.location.href.replace(
-        'favorite-recipes',
-        `${type === 'food' ? 'foods' : 'drinks'}/${id}`,
-      );
+    const link =
+      page === "done"
+        ? window.location.href.replace(
+            "done-recipes",
+            `${type === "food" ? "foods" : "drinks"}/${id}`
+          )
+        : window.location.href.replace(
+            "favorite-recipes",
+            `${type === "food" ? "foods" : "drinks"}/${id}`
+          );
     copy(link);
     setLinkCopied(true);
     const threeThousand = 3000;
@@ -41,55 +43,48 @@ function CardDoneFavoriteRecipe({
   };
 
   const favoriteRecipe = () => {
-    const favorites = lS('g', 'favoriteRecipes');
+    const favorites = lS("g", "favoriteRecipes");
     const newFavorites = favorites.filter((favorite) => favorite.id !== id);
-    lS('s', 'favoriteRecipes', newFavorites);
+    lS("s", "favoriteRecipes", newFavorites);
     setRecipes(newFavorites);
   };
 
   return (
     <section className="card-done-recipe">
       <section>
-        <Link to={ type === 'food' ? `/foods/${id}` : `/drinks/${id}` }>
-          <img src={ image } alt="" data-testid={ `${index}-horizontal-image` } />
+        <Link to={type === "food" ? `/foods/${id}` : `/drinks/${id}`}>
+          <img src={image} alt="" />
           <section>
-            <h1 data-testid={ `${index}-horizontal-name` }>{name}</h1>
-            <span
-              className="done-favorite-category"
-              data-testid={ `${index}-horizontal-top-text` }
-            >
-              {type === 'food' ? `${nationality} - ${category}` : alcoholicOrNot}
+            <h1>{name}</h1>
+            <span className="done-favorite-category">
+              {type === "food"
+                ? `${nationality} - ${category}`
+                : alcoholicOrNot}
             </span>
-            <span data-testid={ `${index}-horizontal-done-date` }>{doneDate}</span>
+            <span>{doneDate}</span>
             <section className="tags-section">
-              {page === 'done'
-                && tags.map((tag, i) => (
-                  <span key={ i } data-testid={ `${index}-${tag}-horizontal-tag` }>
-                    {tag}
-                  </span>
-                ))}
+              {page === "done" &&
+                tags.map((tag, i) => <span key={i}>{tag}</span>)}
             </section>
           </section>
         </Link>
         <section className="buttons">
           <button
-            src={ shareIcon }
+            src={shareIcon}
             type="button"
-            data-testid={ `${index}-horizontal-share-btn` }
-            onClick={ handleShare }
+            onClick={handleShare}
             className="share-btn"
           >
             {linkCopied ? <span>Link copied!</span> : <span>Share</span>}
           </button>
-          {page === 'favorite' && (
+          {page === "favorite" && (
             <button
-              data-testid={ `${index}-horizontal-favorite-btn` }
-              src={ like }
+              src={like}
               type="button"
-              onClick={ favoriteRecipe }
+              onClick={favoriteRecipe}
               className="favorite-btn"
             >
-              <img src={ like } alt="isFavorite" />
+              <Icon icon="line-md:heart-filled" />
             </button>
           )}
         </section>

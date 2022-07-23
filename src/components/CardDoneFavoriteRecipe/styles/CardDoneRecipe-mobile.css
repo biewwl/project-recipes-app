@@ -1,88 +1,86 @@
-@media screen and ( max-width : 425px ) {
+.card-done-recipe > section {
+  width: 100%;
+}
 
-  .card-done-recipe > section {
-    width: 100%;
-  }
+.tags-section {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
 
-  .tags-section {
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-  }
+.tags-section span {
+  margin-right: 10px;
+}
 
-  .tags-section span {
-    margin-right: 10px;
-  }
+.card-done-recipe a {
+  display: flex;
+  height: 20vh;
+  max-height: 200px;
+  text-decoration: none;
+}
 
-  .card-done-recipe a {
-    display: flex;
-    height: 20vh;
-    text-decoration: none;
-  }
+.card-done-recipe a h1 {
+  color: var(--primaryColor);
+  font-size: 1em;
+  font-weight: 100;
+}
 
-  .card-done-recipe a h1 {
-    color: var(--primaryColor);
-    font-size: 1em;
-    font-weight: 100;
-  }
+.card-done-recipe a span {
+  color: #444;
+  font-size: 0.7em;
+}
 
-  .card-done-recipe a span {
-    color: #444;
-    font-size: 0.7em;
-  }
+.card-done-recipe .done-favorite-category {
+  font-size: 0.8em;
+  font-style: italic;
+}
 
-  .card-done-recipe .done-favorite-category {
-    color: var(--secondaryColor);
-    font-size: 0.8em;
-    font-style: italic;
-  }
+.card-done-recipe a > section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 10px;
+}
 
-  .card-done-recipe a > section {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 0 10px;
-  }
+.card-done-recipe a > img {
+  border-radius: 0.5em;
+  height: 100%;
+  object-fit: cover;
+}
 
-  .card-done-recipe a > img {
-    border-radius: 0.5em;
-    height: 100%;
-    object-fit: cover;
-  }
+.card-done-recipe .buttons {
+  display: flex;
+}
 
-  .card-done-recipe .buttons {
-    display: flex;
-  }
+.card-done-recipe .favorite-btn {
+  align-items: center;
+  background: none;
+  border: 0;
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 5px;
+  width: 20%;
+  cursor: pointer;
+}
 
-  .card-done-recipe .favorite-btn {
-    align-items: center;
-    background: none;
-    border: 0;
-    border-radius: 0.5em;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    padding: 5px;
-    width: 20%;
-  }
+.card-done-recipe .favorite-btn svg {
+  color: var(--primaryColor);
+  font-size: 1.5em;
+}
 
-  .card-done-recipe .favorite-btn img {
-    filter: opacity(0.5) drop-shadow(0 0 0 var(--primaryColor))
-      saturate(300%) contrast(200%) brightness(200%);
-    height: 20px;
-  }
+.card-done-recipe .share-btn {
+  background-color: white;
+  border: 1px solid var(--secondaryColor);
+  border-radius: 0.5em;
+  margin-right: 5px;
+  margin-top: 10px;
+  padding: 5px;
+  width: 100%;
+  cursor: pointer;
+}
 
-  .card-done-recipe .share-btn {
-    background-color: white;
-    border: 1px solid var(--secondaryColor);
-    border-radius: 0.5em;
-    margin-right: 5px;
-    margin-top: 10px;
-    padding: 5px;
-    width: 100%;
-  }
-
-  .card-done-recipe .share-btn span {
-    color: var(--secondaryColor);
-  }
+.card-done-recipe .share-btn span {
+  color: var(--secondaryColor);
 }

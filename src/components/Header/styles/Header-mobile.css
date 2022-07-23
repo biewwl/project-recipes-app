@@ -1,5 +1,6 @@
 @media screen and (max-width: 425px) {
   header {
+    display: grid;
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
     box-shadow: 0 3px 0 var(--primaryColor);
@@ -8,6 +9,7 @@
 
   header span {
     display: none;
+    width: auto;
   }
 
   header .profile-button {

@@ -1,14 +1,5 @@
 @media screen and ( max-width : 425px ) {
 
-  .drinks-explore {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: space-evenly;
-    padding: 80px 0;
-  }
-
   .drinks-explore button {
     align-items: center;
     background-color: #eee;
