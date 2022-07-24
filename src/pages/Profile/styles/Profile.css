@@ -1,54 +1,51 @@
-/* @media screen and ( max-width : 425px ) { */
+.profile {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-around;
+  padding: 80px 20px;
+}
 
-  .profile {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: space-around;
-    padding: 80px 20px;
-  }
+.profile h3 {
+  color: #444;
+  font-weight: 100;
+}
 
-  .profile h3 {
-    color: #444;
-    font-weight: 100;
-  }
+.profile div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
-  .profile div {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
+.profile a {
+  border: none;
+  border-radius: 25px;
+  font-size: .7em;
+  margin: 10px;
+  max-width: 200px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 60%;
+}
 
-  .profile a {
-    border: none;
-    border-radius: 25px;
-    font-size: 0.7em;
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    width: 60%;
-    max-width: 200px;
-  }
+.profile a:first-child {
+  background-color: var(--primaryColor);
+  color: #fff;
+}
 
-  .profile a:first-child {
-    background-color: var(--primaryColor);
-    color: white;
-  }
+.profile a:nth-child(2) {
+  background-color: #fff;
+  border: 2px solid var(--primaryColor);
+  color: var(--primaryColor);
+  padding: 8px;
+}
 
-  .profile a:nth-child( 2 ) {
-    background-color: white;
-    border: 2px solid var(--primaryColor);
-    color: var(--primaryColor);
-    padding: 8px;
-  }
-
-  .profile button {
-    border: none;
-    color: #444;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-/* } */
+.profile button {
+  border: none;
+  color: #444;
+  cursor: pointer;
+  padding: 10px 20px;
+}

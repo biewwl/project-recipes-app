@@ -64,3 +64,15 @@
   font-family: product sans, sans-serif;
   font-weight: 100;
 }
+
+.desktop-title-page {
+  padding: 40px;
+  color: var(--primaryColor);
+  font-size: 2em;
+}
+
+@media screen and (max-width: 425px) {
+  .desktop-title-page {
+    display: none;
+  }
+}

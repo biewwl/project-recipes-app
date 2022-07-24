@@ -1,6 +1,6 @@
 .card-done-recipe {
-  border: 1px solid rgb(230, 230, 230);
-  box-shadow: 0 0 5px rgb(230, 230, 230);
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 0 5px #e6e6e6;
   display: flex;
   justify-content: space-between;
   justify-self: center;
@@ -46,13 +46,13 @@
 }
 
 .card-done-recipe .done-favorite-category {
-  font-size: 0.8em;
+  font-size: .8em;
   font-style: italic;
 }
 
 .card-done-recipe a span {
   color: #444;
-  font-size: 0.7em;
+  font-size: .7em;
 }
 
 .tags-section {
@@ -86,7 +86,7 @@
 }
 
 .card-done-recipe .share-btn span {
-  font-size: 0.6em;
+  font-size: .6em;
 }
 
 .card-done-recipe .favorite-btn {

@@ -16,13 +16,13 @@
   footer:hover {
     border-radius: 1em;
     height: auto;
-    width: 95vw;
+    width: 100vw;
   }
 
   footer .explore-button {
     background-color: var(--primaryColor);
     border-radius: 50%;
-    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.262);
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, .262);
     height: 65px;
     position: absolute;
     top: 0;

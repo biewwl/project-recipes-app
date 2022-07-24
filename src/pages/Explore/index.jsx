@@ -3,7 +3,6 @@ import { useHistory } from 'react-router-dom';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import './styles/Explore.css';
-import './styles/Explore-mobile.css';
 
 function Explore() {
   const history = useHistory();

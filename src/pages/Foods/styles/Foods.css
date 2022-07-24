@@ -2,12 +2,6 @@
   padding: 50px 0;
 }
 
-.desktop-title-page {
-  padding: 40px;
-  color: var(--primaryColor);
-  font-size: 2em;
-}
-
 .foods .recipes {
   justify-items: center;
   display: grid;

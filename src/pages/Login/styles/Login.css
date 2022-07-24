@@ -1,16 +1,3 @@
-@keyframes toTop {
-
-  0% {
-    opacity: 0%;
-    transform: translateY(10px);
-  }
-
-  100% {
-    opacity: 100%;
-    transform: translateY(0);
-  }
-}
-
 .login {
   align-items: center;
   background-image: url("../images/recipes-wallpaper.jpeg");
@@ -23,9 +10,9 @@
 }
 
 .login form {
-  animation: toTop 0.5s;
-  background-color: white;
-  border-radius: 0.5em;
+  animation: toTop .5s;
+  background-color: #fff;
+  border-radius: .5em;
   box-shadow: 0 -5px 0 var(--primaryColor),
     0 -10px 0 var(--secondaryColor);
   display: flex;
@@ -42,7 +29,7 @@
 
 .login form span {
   color: #444;
-  font-size: 0.7em;
+  font-size: .7em;
   font-weight: 100;
 }
 
@@ -55,8 +42,8 @@
 
 .login form input {
   border: 1px solid var(--secondaryColor);
-  border-radius: 0.2em;
-  font-size: 0.8em;
+  border-radius: .2em;
+  font-size: .8em;
   margin: 10px;
   padding: 5px;
 }
@@ -70,14 +57,14 @@
   background-color: var(--secondaryColor);
   border: 0;
   border-radius: 25px;
-  color: white;
+  color: #fff;
   margin: 10px;
   padding: 5px 20px;
   cursor: pointer;
 }
 
 .login form button:disabled {
-  background-color: grey;
-  opacity: 0.2;
+  background-color: #808080;
+  opacity: .2;
   cursor: not-allowed;
 }

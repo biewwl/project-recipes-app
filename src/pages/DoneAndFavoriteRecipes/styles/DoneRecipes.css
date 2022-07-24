@@ -1,11 +1,11 @@
 .done-favorites-recipes {
-  padding: 60px 0;
   min-height: 100vh;
+  padding: 60px 0;
 }
 
 .done-favorites-recipes .filters {
   display: grid;
-  grid-column-gap: 10px;
+  grid-gap: 10px;
   grid-template-columns: repeat(3, 1fr);
   padding: 20px 10px;
 }
@@ -14,25 +14,24 @@
   background-color: #eee;
   border: none;
   border-radius: 25px;
-  color: white;
-  font-size: 0.7em;
-  padding: 5px;
-  cursor: pointer;
-  width: 100%;
-  max-width: 150px;
-  justify-self: center;
   color: #444;
+  cursor: pointer;
+  font-size: .7em;
+  justify-self: center;
+  max-width: 150px;
+  padding: 5px;
+  width: 100%;
 }
 
 .done-favorites-recipes .filters button:first-child {
-  background-color: white;
+  background-color: #fff;
   border: 2px solid #eee;
 }
 
 .done-favorites {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   justify-items: center;
   padding: 40px;
   width: 100%;

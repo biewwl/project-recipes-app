@@ -1,25 +1,13 @@
-@keyframes toTop {
-  0% {
-    opacity: 0%;
-    transform: translateY(10px);
-  }
-
-  100% {
-    opacity: 100%;
-    transform: translateY(0);
-  }
-}
-
 .explore {
-  display: grid;
-  height: 100vh;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
-  padding: 80px 20px;
-  grid-gap: 40px;
-  align-items: center;
-  justify-items: center;
-  justify-content: center;
   align-content: center;
+  align-items: center;
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(auto-fit, 300px);
+  height: 100vh;
+  justify-content: center;
+  justify-items: center;
+  padding: 80px 20px;
 }
 
 .explore-foods,
@@ -28,20 +16,20 @@
   animation: toTop 1s;
   background-image: url("../images/food-card.jpg");
   background-size: cover;
-  border: none;
   border-radius: 1em;
-  box-shadow: 0 4px 0 var(--secondaryColor), 0 0 5px rgb(225, 225, 225);
+  border: none;
+  box-shadow: 0 4px 0 var(--secondaryColor), 0 0 5px #e1e1e1;
+  cursor: pointer;
   display: flex;
   height: 200px;
   width: 100%;
-  cursor: pointer;
 }
 
 .explore-foods span,
 .explore-drinks span {
   background-color: var(--secondaryColor);
   border-radius: 0 0 1em 1em;
-  color: white;
+  color: #fff;
   padding: 5px 20px;
   width: 100%;
 }

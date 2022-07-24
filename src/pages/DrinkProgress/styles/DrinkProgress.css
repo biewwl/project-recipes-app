@@ -1,44 +1,77 @@
 .drink-progress {
   align-items: center;
+  background-image: url("../../../patterns/i-like-food-red.svg");
   display: flex;
   flex-direction: column;
   font-weight: 100;
-  background-image: url("../../../patterns/i-like-food-red.svg");
-}
-
-.drink-progress .back-button {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 1.5em;
-  background: #fff;
-  border-bottom-right-radius: 25px;
-  border: none;
-  padding: 10px;
-  color: var(--redPrimary);
-  cursor: pointer;
 }
 
 .drink-progress > div {
   align-items: center;
+  background-color: #fff;
+  box-shadow: 0 0 5px #e1e1e1;
   display: flex;
   flex-direction: column;
-  padding-bottom: 50px;
   max-width: 600px;
-  width: 100%;
+  padding-bottom: 50px;
   position: relative;
-  background-color: #fff;
-  box-shadow: 0 0 5px rgb(225, 225, 225);
+  width: 100%;
+}
+
+.drink-progress .back-button {
+  background: #fff;
+  border: none;
+  border-bottom-right-radius: 25px;
+  color: var(--redPrimary);
+  cursor: pointer;
+  font-size: 1.5em;
+  left: 0;
+  padding: 10px;
+  position: absolute;
+  top: 0;
 }
 
 .drink-progress .recipe-photo {
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em;
   box-shadow: 0 5px 0 var(--redPrimary), 0 10px 0 var(--redSecondary);
-  margin-bottom: 20px;
   height: 50vh;
+  margin-bottom: 20px;
   object-fit: cover;
   width: 100%;
+}
+
+.drink-progress .share-and-favorites {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  position: absolute;
+  top: 46vh;
+  width: 100%;
+}
+
+.drink-progress .share-btn, .drink-progress .favorite-btn {
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #c9c9c9;
+  color: var(--redSecondary);
+  cursor: pointer;
+  font-size: 1em;
+  height: 50px;
+  margin: 6px;
+  width: 50px;
+}
+
+.drink-progress .share-and-favorites button span,
+.drink-progress .share-and-favorites button svg,
+.drink-progress .start-recipe-btn span,
+.drink-progress .start-recipe-btn svg {
+  margin: 0 5px;
+}
+
+.drink-progress .share-and-favorites button svg {
+  font-size: 1.3em;
 }
 
 .drink-progress .title-and-category {
@@ -53,59 +86,18 @@
 
 .drink-progress h4 {
   color: var(--redPrimary);
-  font-size: 0.8em;
+  font-size: .8em;
   font-style: italic;
   font-weight: 100;
-}
-
-.drink-progress .share-and-favorites {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  justify-content: flex-end;
-  padding: 10px;
-  position: absolute;
-  top: 46vh;
-}
-
-.drink-progress .share-btn, .drink-progress .favorite-btn {
-  margin: 6px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: none;
-  background-color: white;
-  color: var(--redSecondary);
-  box-shadow: 0 0 5px rgb(201, 201, 201);
-  font-size: 1em;
-  cursor: pointer;
-}
-
-.drink-progress .start-recipe-btn span {
-  margin: 0 5px;
-}
-
-.drink-progress .start-recipe-btn svg {
-  font-size: 1.5em;
-  margin: 0 5px;
-}
-
-.drink-progress .share-and-favorites button span {
-  margin: 0 5px;
-}
-
-.drink-progress .share-and-favorites button svg {
-  font-size: 1.3em;
-  margin: 0 5px;
 }
 
 .drink-progress .ingredients {
   background-color: var(--redSecondary);
   border: none;
-  border-radius: 0.5em;
-  color: white;
+  border-radius: .5em;
+  color: #fff;
   font-family: sans-serif;
-  font-size: 0.8em;
+  font-size: .8em;
   margin: 20px 0;
   padding: 20px 0;
   width: 100%;
@@ -123,7 +115,7 @@
 }
 
 .drink-progress .ingredients input {
-  margin-right: 10px;
+  margin-inline-end: 10px;
 }
 
 .drink-progress .instructions {
@@ -134,13 +126,13 @@
 }
 
 .drink-progress .instructions h5 {
-  padding: 10px 0 20px 0;
-  font-weight: 800;
   color: #444;
+  font-weight: 800;
+  padding: 10px 0 20px 0;
 }
 
 .drink-progress .instructions p {
-  font-size: 0.8em;
+  font-size: .8em;
 }
 
 .drink-progress .finish-recipe-btn {
@@ -149,17 +141,21 @@
   border: none;
   border-radius: 25px;
   bottom: 0;
-  color: white;
+  color: #fff;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
+  max-width: 200px;
   padding: 10px;
   position: fixed;
   width: 90%;
-  max-width: 200px;
-  cursor: pointer;
 }
 
 .drink-progress .finish-recipe-btn:disabled {
   opacity: 0;
+}
+
+.drink-progress .start-recipe-btn svg {
+  font-size: 1.5em;
 }

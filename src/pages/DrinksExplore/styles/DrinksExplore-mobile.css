@@ -3,33 +3,13 @@
   .drinks-explore button {
     align-items: center;
     background-color: #eee;
-    border: 1px solid rgb(222, 222, 222);
-    border-radius: 0.5em;
-    display: flex;
+    border: 1px solid #dedede;
+    border-radius: .5em;
     justify-content: space-between;
     width: 80vw;
   }
 
   .drinks-explore button:nth-child( 2 ) {
     flex-direction: row-reverse;
-  }
-
-  .drinks-explore span {
-    color: #444;
-    padding: 10px;
-    width: 50%;
-  }
-
-  .drinks-explore .image-ingredient, .drinks-explore .image-surprise {
-    background-image: url('../images/ingredients.jpg');
-    background-position: center;
-    background-size: cover;
-    border-radius: 0.5em;
-    height: 25vw;
-    width: 40vw;
-  }
-
-  .drinks-explore .image-surprise {
-    background-image: url('../images/surprise.jpg');
   }
 }

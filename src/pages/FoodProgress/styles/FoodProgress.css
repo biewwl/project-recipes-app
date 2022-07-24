@@ -1,44 +1,77 @@
 .food-progress {
   align-items: center;
+  background-image: url("../../../patterns/i-like-food.svg");
   display: flex;
   flex-direction: column;
   font-weight: 100;
-  background-image: url("../../../patterns/i-like-food.svg");
-}
-
-.food-progress .back-button {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 1.5em;
-  background: #fff;
-  border-bottom-right-radius: 25px;
-  border: none;
-  padding: 10px;
-  color: var(--redPrimary);
-  cursor: pointer;
 }
 
 .food-progress > div {
   align-items: center;
+  background-color: #fff;
+  box-shadow: 0 0 5px #e1e1e1;
   display: flex;
   flex-direction: column;
-  padding-bottom: 50px;
-  width: 100%;
   max-width: 600px;
+  padding-bottom: 50px;
   position: relative;
-  background-color: #fff;
-  box-shadow: 0 0 5px rgb(225, 225, 225);
+  width: 100%;
+}
+
+.food-progress .back-button {
+  background: #fff;
+  border-bottom-right-radius: 25px;
+  border: none;
+  color: var(--redPrimary);
+  cursor: pointer;
+  font-size: 1.5em;
+  left: 0;
+  padding: 10px;
+  position: absolute;
+  top: 0;
 }
 
 .food-progress .recipe-photo {
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em;
   box-shadow: 0 5px 0 var(--redPrimary), 0 10px 0 var(--redSecondary);
-  margin-bottom: 20px;
   height: 50vh;
+  margin-bottom: 20px;
   object-fit: cover;
   width: 100%;
+}
+
+.food-progress .share-and-favorites {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  position: absolute;
+  top: 46vh;
+  width: 100%;
+}
+
+.food-progress .share-btn , .food-progress .favorite-btn {
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 0 5px #c9c9c9;
+  color: var(--redSecondary);
+  cursor: pointer;
+  font-size: 1em;
+  height: 50px;
+  margin: 6px;
+  width: 50px;
+}
+
+.food-progress .share-and-favorites button span,
+.food-progress .share-and-favorites button svg,
+.food-progress .start-recipe-btn span,
+.food-progress .start-recipe-btn svg {
+  margin: 0 5px;
+}
+
+.food-progress .share-and-favorites button svg {
+  font-size: 1.3em;
 }
 
 .food-progress .title-and-category {
@@ -53,59 +86,18 @@
 
 .food-progress h4 {
   color: var(--redPrimary);
-  font-size: 0.8em;
+  font-size: .8em;
   font-style: italic;
   font-weight: 100;
 }
 
-.food-progress .share-and-favorites {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  justify-content: flex-end;
-  padding: 10px;
-  position: absolute;
-  top: 46vh;
-}
-
-.food-progress .share-btn , .food-progress .favorite-btn {
-  margin: 6px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: none;
-  background-color: white;
-  color: var(--redSecondary);
-  box-shadow: 0 0 5px rgb(201, 201, 201);
-  font-size: 1em;
-  cursor: pointer;
-}
-
-.food-progress .start-recipe-btn span {
-  margin: 0 5px;
-}
-
-.food-progress .start-recipe-btn svg {
-  font-size: 1.5em;
-  margin: 0 5px;
-}
-
-.food-progress .share-and-favorites button span {
-  margin: 0 5px;
-}
-
-.food-progress .share-and-favorites button svg {
-  font-size: 1.3em;
-  margin: 0 5px;
-}
-
 .food-progress .ingredients {
   background-color: var(--redSecondary);
+  border-radius: .5em;
   border: none;
-  border-radius: 0.5em;
-  color: white;
+  color: #fff;
   font-family: sans-serif;
-  font-size: 0.8em;
+  font-size: .8em;
   margin: 20px 0;
   padding: 20px 0;
   width: 100%;
@@ -134,32 +126,36 @@
 }
 
 .food-progress .instructions h5 {
-  padding: 10px 0 20px 0;
-  font-weight: 800;
   color: #444;
+  font-weight: 800;
+  padding: 10px 0 20px 0;
 }
 
 .food-progress .instructions p {
-  font-size: 0.8em;
+  font-size: .8em;
 }
 
 .food-progress .finish-recipe-btn {
   align-items: center;
   background-color: var(--redPrimary);
-  border: none;
   border-radius: 25px;
+  border: none;
   bottom: 0;
   color: white;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
+  max-width: 200px;
   padding: 10px;
   position: fixed;
   width: 90%;
-  max-width: 200px;
-  cursor: pointer;
 }
 
 .food-progress .finish-recipe-btn:disabled {
   opacity: 0;
+}
+
+.food-progress .start-recipe-btn svg {
+  font-size: 1.5em;
 }

@@ -5,7 +5,7 @@
     border-bottom-right-radius: 1em;
     box-shadow: 0 3px 0 var(--primaryColor);
     display: grid;
-    grid-template-columns: 0.4fr 1fr 0.4fr;
+    grid-template-columns: .4fr 1fr .4fr;
     padding: 10px 20px;
   }
 
@@ -22,7 +22,7 @@
   header h1 {
     align-items: center;
     align-self: center;
-    color: white;
+    color: #fff;
     display: flex;
     font-size: 1.15em;
     font-weight: 100;

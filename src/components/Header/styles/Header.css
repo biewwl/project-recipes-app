@@ -23,7 +23,7 @@ header .profile-button {
 
 header .profile-button svg,
 header .search-button svg {
-  color: white;
+  color: #fff;
   font-size: 1.3em;
 }
 
@@ -34,7 +34,7 @@ header h1 {
 header span {
   align-items: center;
   align-self: center;
-  color: white;
+  color: #fff;
   display: flex;
   font-size: 1.15em;
   font-weight: 100;

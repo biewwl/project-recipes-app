@@ -10,7 +10,7 @@
 .search input {
   border: 1px solid var(--primaryColor);
   border-radius: 25px;
-  font-size: 0.8em;
+  font-size: .8em;
   margin: 10px;
   padding: 8px;
 }
@@ -27,20 +27,20 @@
 .search label {
   align-items: center;
   display: flex;
-  font-size: 0.8em;
+  font-size: .8em;
 }
 
 .search button {
   background-color: var(--primaryColor);
   border: 0;
   border-radius: 25px;
-  color: white;
+  color: #fff;
   margin: 10px;
   padding: 5px 10px;
 }
 
 .search button:disabled {
-  background-color: grey;
+  background-color: #808080;
   cursor: not-allowed;
-  opacity: 0.2;
+  opacity: .2;
 }

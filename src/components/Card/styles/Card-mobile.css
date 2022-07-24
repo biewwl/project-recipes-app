@@ -1,0 +1,24 @@
+@media screen and (max-width: 425px) {
+  .drinks .card {
+    border-radius: 1em;
+    box-shadow: 0 0 3px #c6c6c6;
+    margin: 2.5vw 0;
+    width: 90vw;
+  }
+
+  .drinks .card h5 {
+    color: #444;
+    overflow: hidden;
+    padding: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  .drinks .card img {
+    border-radius: 1em;
+    height: 45vw;
+    object-fit: cover;
+    width: 90vw;
+  }
+}
