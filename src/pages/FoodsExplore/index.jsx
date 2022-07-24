@@ -4,7 +4,6 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { fetchRandomFood } from "../../helpers/fetchFoods";
 import "./styles/FoodsExplore.css";
-import "./styles/FoodsExplore-mobile.css";
 
 function FoodsExplore() {
   const history = useHistory();

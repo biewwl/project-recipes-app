@@ -4,7 +4,6 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import { fetchRandomDrink } from '../../helpers/fetchDrinks';
 import './styles/DrinksExplore.css';
-import './styles/DrinksExplore-mobile.css';
 
 function DrinksExplore() {
   const history = useHistory();

@@ -16,6 +16,7 @@ function Explore() {
           onClick={ () => history.push('/explore/foods') }
           className="explore-foods"
         >
+          <div className="food-img" />
           <span>Explore Foods</span>
         </button>
         <button
@@ -23,6 +24,7 @@ function Explore() {
           onClick={ () => history.push('/explore/drinks') }
           className="explore-drinks"
         >
+          <div className="drink-img" />
           <span>Explore Drinks</span>
         </button>
       </article>

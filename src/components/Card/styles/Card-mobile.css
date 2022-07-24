@@ -1,9 +1,29 @@
-@media screen and (max-width: 425px) {
-  .drinks .card {
-    border-radius: 1em;
+@media screen and ( max-width : 425px ) {
+
+  .foods .card {
     box-shadow: 0 0 3px #c6c6c6;
     margin: 2.5vw 0;
-    width: 90vw;
+    width: 300px;
+  }
+
+  .foods .card h5 {
+    color: #444;
+    overflow: hidden;
+    padding: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  .foods .card img {
+    height: 60vw;
+    object-fit: cover;
+  }
+
+  .drinks .card {
+    box-shadow: 0 0 3px #c6c6c6;
+    margin: 2.5vw 0;
+    width: 300px;
   }
 
   .drinks .card h5 {
@@ -16,9 +36,8 @@
   }
 
   .drinks .card img {
-    border-radius: 1em;
-    height: 45vw;
+    height: 60vw;
     object-fit: cover;
-    width: 90vw;
+    object-position: top;
   }
 }

@@ -1,9 +1,4 @@
 @font-face {
-  font-family: chocolate;
-  src: url('./fonts/chocolate_5/Chocolate.ttf');
-}
-
-@font-face {
   font-family: product sans;
   src: url('./fonts/product-sans/Product\ Sans\ Regular.ttf');
 }

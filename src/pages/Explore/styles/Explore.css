@@ -1,6 +1,7 @@
 .explore {
   align-content: center;
   align-items: center;
+  background-image: url(../../../patterns/i-like-food.svg);
   display: grid;
   grid-gap: 40px;
   grid-template-columns: repeat(auto-fit, 300px);
@@ -14,26 +15,36 @@
 .explore-drinks {
   align-items: flex-end;
   animation: toTop 1s;
-  background-image: url("../images/food-card.jpg");
-  background-size: cover;
-  border-radius: 1em;
-  border: none;
-  box-shadow: 0 4px 0 var(--secondaryColor), 0 0 5px #e1e1e1;
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 0 3px #c6c6c6;
   cursor: pointer;
   display: flex;
+  flex-direction: column;
   height: 200px;
+  width: 100%;
+}
+
+.explore-foods .food-img {
+  background-position: center;
+  background-image: url("../images/food-card.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.explore-drinks .drink-img {
+  background-image: url("../images/drink-card.jpeg");
+  background-size: cover;
+  height: 100%;
   width: 100%;
 }
 
 .explore-foods span,
 .explore-drinks span {
-  background-color: var(--secondaryColor);
-  border-radius: 0 0 1em 1em;
-  color: #fff;
-  padding: 5px 20px;
+  color: #444;
+  font-size: 1.2em;
+  padding: 15px;
+  text-align: left;
   width: 100%;
-}
-
-.explore-drinks {
-  background-image: url("../images/drink-card.jpeg");
 }

@@ -20,6 +20,26 @@
   width: 100%;
 }
 
+.foods .card {
+  box-shadow: 0 0 3px #c6c6c6;
+  margin: 2.5vw 0;
+  width: 200px;
+}
+
+.foods .card h5 {
+  color: #444;
+  overflow: hidden;
+  padding: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.foods .card img {
+  height: 80%;
+  object-fit: cover;
+  width: 100%;
+}
 
 .drinks .card {
   box-shadow: 0 0 3px #c6c6c6;

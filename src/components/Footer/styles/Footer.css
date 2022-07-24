@@ -19,7 +19,7 @@ footer {
 footer::before {
   align-items: center;
   background-color: var(--secondaryColor);
-  content: url('https://api.iconify.design/line-md/plus.svg?color=white');
+  content: url('https://api.iconify.design/line-md/align-right.svg?color=white');
   display: flex;
   height: 100%;
   justify-content: center;

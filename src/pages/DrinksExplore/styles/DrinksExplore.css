@@ -1,10 +1,11 @@
 .drinks-explore {
   align-content: center;
   align-items: center;
+  background-image: url(../../../patterns/i-like-food.svg);
   display: grid;
   grid-gap: 40px;
   grid-template-columns: repeat(auto-fit, 300px);
-  height: 100vh;
+  min-height: 100vh;
   justify-content: center;
   justify-items: center;
   padding: 80px 20px;
@@ -13,43 +14,34 @@
 .drinks-explore button {
   align-items: flex-end;
   animation: toTop 1s;
-  background-size: cover;
-  border: none;
-  border-radius: 1em;
-  box-shadow: 0 4px 0 var(--secondaryColor), 0 0 5px #e1e1e1;
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 0 3px #c6c6c6;
   cursor: pointer;
   display: flex;
-  height: 100px;
+  flex-direction: column;
+  height: 200px;
   width: 100%;
 }
 
-.drinks-explore span {
-  align-items: center;
-  color: #444;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  padding: 10px;
-  width: 50%;
-}
-
-.drinks-explore .image-ingredient, .drinks-explore .image-surprise {
+.drinks-explore .image-ingredient,
+.drinks-explore .image-nationality,
+.image-surprise {
+  background-image: url(../images/ingredients.jpg);
+  background-size: cover;
   background-position: center;
-  background-size: cover;
-}
-
-.drinks-explore .image-ingredient {
-  background-image: url("../images/ingredients.jpg");
-  background-size: cover;
-  border-radius: .5em;
-  height: 100px;
-  width: 50%;
+  height: 100%;
+  width: 100%;
 }
 
 .drinks-explore .image-surprise {
-  background-image: url("../images/surprise.jpg");
-  background-size: cover;
-  border-radius: .5em;
-  height: 100px;
-  width: 50%;
+  background-image: url(../images/surprise.jpg);
+}
+
+.drinks-explore span {
+  color: #444;
+  font-size: 1.2em;
+  padding: 15px;
+  text-align: left;
+  width: 100%;
 }
