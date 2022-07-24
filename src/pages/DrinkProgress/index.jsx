@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import lS from "manager-local-storage";
 import PropTypes from "prop-types";
+import lS from "manager-local-storage";
 import { Icon } from "@iconify/react";
 import { fetchDrinkDetails } from "../../helpers/fetchDrinks";
 import checkLS from "../../helpers/checkLocalStorage";
 import getIngredients from "../../helpers/getAllIngredients";
+import favoriteRecipe from "../../helpers/favoriteRecipe";
 import finishRecipe from "../../helpers/finishRecipe";
-import "./styles/DrinkProgress-mobile.css";
+import "./styles/DrinkProgress.css";
 
 const copy = require("clipboard-copy");
 
@@ -47,7 +48,7 @@ function DrinkProgress({
       setDrinkIngredients(ingredients);
     };
     getDrinkDetails();
-  }, []);
+  }, [id]);
 
   useEffect(() => {
     if (
@@ -67,27 +68,8 @@ function DrinkProgress({
     setTimeout(() => setLinkCopied(false), threeThousand);
   };
 
-  const favoriteRecipe = () => {
-    const favorites = lS("g", "favoriteRecipes");
-    if (isFavorite) {
-      const newFavorites = favorites.filter((favorite) => favorite.id !== id);
-      lS("s", "favoriteRecipes", newFavorites);
-    } else {
-      const newFavorites = [
-        ...favorites,
-        {
-          id: drinkDetails[0].idDrink,
-          type: "drink",
-          nationality: "",
-          category: drinkDetails[0].strCategory,
-          alcoholicOrNot: drinkDetails[0].strAlcoholic,
-          name: drinkDetails[0].strDrink,
-          image: drinkDetails[0].strDrinkThumb,
-        },
-      ];
-      lS("s", "favoriteRecipes", newFavorites);
-    }
-    setIsFavorite(!isFavorite);
+  const handleFavorite = () => {
+    setIsFavorite(favoriteRecipe(drinkDetails[0], "drink", isFavorite));
   };
 
   const handleFinish = () => {
@@ -142,7 +124,7 @@ function DrinkProgress({
               </button>
               <button
                 type="button"
-                onClick={favoriteRecipe}
+                onClick={handleFavorite}
                 className="favorite-btn"
               >
                 {isFavorite && <Icon icon="line-md:heart-filled" />}
@@ -156,7 +138,7 @@ function DrinkProgress({
             <div className="ingredients">
               <ul>
                 {drinkIngredients.map((ingredient, i) => (
-                  <li key={i} data-testid={`${i}-ingredient-step`}>
+                  <li key={i}>
                     <label htmlFor={`ingredient-${i}`}>
                       <input
                         className="ingredient"

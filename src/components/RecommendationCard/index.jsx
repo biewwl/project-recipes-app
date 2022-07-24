@@ -1,33 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import fetchFoods from '../../helpers/fetchFoods';
 import fetchDrinks from '../../helpers/fetchDrinks';
 import Card from '../Card';
-import './styles/RecommendationCard-mobile.css';
+import './styles/RecommendationCard.css';
 
 function RecommendationCard({ page }) {
   const [fetchResult, setFetchResult] = useState([]);
 
   useEffect(() => {
-    if (page === 'drinks') {
-      const getFoods = async () => {
-        const results = await fetchFoods('name', '');
-        const seis = 6;
-        const slicedResults = results.slice(0, seis);
-        setFetchResult(slicedResults);
-      };
-      getFoods();
-    } else if (page === 'foods') {
-      const getDrinks = async () => {
-        const results = await fetchDrinks('name', '');
-        const seis = 6;
-        const slicedResults = results.slice(0, seis);
-        setFetchResult(slicedResults);
-      };
-      getDrinks();
+    const getRecipes = async () => {
+      const results = await page === 'foods' ?
+      await fetchDrinks('name', '') :
+      await fetchFoods('name', '');
+      const cardsAmount = 6;
+      const slicedResults = results.slice(0, cardsAmount);
+      setFetchResult(slicedResults);
     }
-  }, []);
+    getRecipes();
+  }, [page]);
 
   return (
     <section className="recommendation-card">
@@ -47,11 +39,8 @@ function RecommendationCard({ page }) {
         return (
           <Link key={ index } to={ `${link}/${id}` }>
             <Card
-              testid="recomendation-card"
               img={ image }
-              index={ index }
               title={ title }
-              titleTestId="recomendation-title"
             />
           </Link>
         );

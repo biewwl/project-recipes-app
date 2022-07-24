@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { Icon } from "@iconify/react";
-import PropTypes from "prop-types";
 import { useHistory } from "react-router-dom";
+import PropTypes from "prop-types";
+import { Icon } from "@iconify/react";
 import lS from "manager-local-storage";
 import { fetchFoodDetails } from "../../helpers/fetchFoods";
 import RecommendationCard from "../../components/RecommendationCard";
-import "./styles/FoodDetails-mobile.css";
 import checkLS from "../../helpers/checkLocalStorage";
 import getIngredients from "../../helpers/getAllIngredients";
 import { getFoodProgress } from "../../helpers/getRecipeProgress";
 import favoriteRecipe from "../../helpers/favoriteRecipe";
+import "./styles/FoodDetails.css";
 
 const copy = require("clipboard-copy");
 
@@ -46,7 +46,7 @@ function FoodDetails({
     };
     getFoodDetails();
     setStatusRecipe(getFoodProgress(id));
-  }, []);
+  }, [id]);
 
   const changeURL = (url) => url.replace("watch", "embed");
 

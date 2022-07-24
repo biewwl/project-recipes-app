@@ -13,7 +13,6 @@ function Explore() {
       <Header title="Explore" />
       <article className="explore">
         <button
-          data-testid="explore-foods"
           type="button"
           onClick={ () => history.push('/explore/foods') }
           className="explore-foods"
@@ -21,7 +20,6 @@ function Explore() {
           <span>Explore Foods</span>
         </button>
         <button
-          data-testid="explore-drinks"
           type="button"
           onClick={ () => history.push('/explore/drinks') }
           className="explore-drinks"

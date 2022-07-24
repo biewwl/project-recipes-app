@@ -1,6 +1,6 @@
-import { Icon } from '@iconify/react';
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import { Icon } from '@iconify/react';
 import './styles/Footer.css';
 import './styles/Footer-mobile.css';
 

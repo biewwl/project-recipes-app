@@ -1,17 +1,14 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import lS from "manager-local-storage";
-import { Link } from "react-router-dom";
-import shareIcon from "../../images/shareIcon.svg";
-import "./styles/CardDoneRecipe-mobile.css";
-import like from "../../images/blackHeartIcon.svg";
 import { Icon } from "@iconify/react";
+import "./styles/CardDoneRecipe.css";
 
 const copy = require("clipboard-copy");
 
 function CardDoneFavoriteRecipe({
   id,
-  index,
   image,
   category,
   nationality,
@@ -70,7 +67,6 @@ function CardDoneFavoriteRecipe({
         </Link>
         <section className="buttons">
           <button
-            src={shareIcon}
             type="button"
             onClick={handleShare}
             className="share-btn"
@@ -80,7 +76,6 @@ function CardDoneFavoriteRecipe({
           </button>
           {page === "favorite" && (
             <button
-              src={like}
               type="button"
               onClick={favoriteRecipe}
               className="favorite-btn"

@@ -3,9 +3,9 @@ import { useHistory } from "react-router-dom";
 import PropTypes from "prop-types";
 import { Icon } from "@iconify/react";
 import Search from "../Search";
+import Dropdown from "../Dropdown";
 import "./styles/Header.css";
 import "./styles/Header-mobile.css";
-import Dropdown from "../Dropdown";
 
 const EXPLORE_NATIONALITIES = "Explore Nationalities";
 

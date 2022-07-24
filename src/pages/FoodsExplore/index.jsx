@@ -1,10 +1,10 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
-import Footer from '../../components/Footer';
-import Header from '../../components/Header';
-import { fetchRandomFood } from '../../helpers/fetchFoods';
-import './styles/FoodsExplore.css';
-import './styles/FoodsExplore-mobile.css';
+import React from "react";
+import { useHistory } from "react-router-dom";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import { fetchRandomFood } from "../../helpers/fetchFoods";
+import "./styles/FoodsExplore.css";
+import "./styles/FoodsExplore-mobile.css";
 
 function FoodsExplore() {
   const history = useHistory();
@@ -20,22 +20,19 @@ function FoodsExplore() {
       <article className="foods-explore">
         <button
           type="button"
-          onClick={ () => history.push('/explore/foods/ingredients') }
+          onClick={() => history.push("/explore/foods/ingredients")}
         >
           <div className="image-ingredient" />
           <span>By Ingredient</span>
         </button>
         <button
           type="button"
-          onClick={ () => history.push('/explore/foods/nationalities') }
+          onClick={() => history.push("/explore/foods/nationalities")}
         >
           <div className="image-nationality" />
           <span>By Nationality</span>
         </button>
-        <button
-          type="button"
-          onClick={ handleRandomFood }
-        >
+        <button type="button" onClick={handleRandomFood}>
           <div className="image-surprise" />
           <span>Surprise me!</span>
         </button>

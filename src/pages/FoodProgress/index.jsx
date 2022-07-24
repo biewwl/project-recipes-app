@@ -7,7 +7,8 @@ import { fetchFoodDetails } from "../../helpers/fetchFoods";
 import checkLS from "../../helpers/checkLocalStorage";
 import getIngredients from "../../helpers/getAllIngredients";
 import finishRecipe from "../../helpers/finishRecipe";
-import "./styles/FoodProgress-mobile.css";
+import "./styles/FoodProgress.css";
+import favoriteRecipe from "../../helpers/favoriteRecipe";
 
 const copy = require("clipboard-copy");
 
@@ -47,7 +48,7 @@ function FoodProgress({
       setFoodIngredients(ingredients);
     };
     getFoodDetails();
-  }, []);
+  }, [id]);
 
   useEffect(() => {
     if (
@@ -67,27 +68,8 @@ function FoodProgress({
     setTimeout(() => setLinkCopied(false), threeThousand);
   };
 
-  const favoriteRecipe = () => {
-    const favorites = lS("g", "favoriteRecipes");
-    if (isFavorite) {
-      const newFavorites = favorites.filter((favorite) => favorite.id !== id);
-      lS("s", "favoriteRecipes", newFavorites);
-    } else {
-      const newFavorites = [
-        ...favorites,
-        {
-          id: foodDetails[0].idMeal,
-          type: "food",
-          nationality: foodDetails[0].strArea,
-          category: foodDetails[0].strCategory,
-          alcoholicOrNot: "",
-          name: foodDetails[0].strMeal,
-          image: foodDetails[0].strMealThumb,
-        },
-      ];
-      lS("s", "favoriteRecipes", newFavorites);
-    }
-    setIsFavorite(!isFavorite);
+  const handleFavorite = () => {
+    setIsFavorite(favoriteRecipe(foodDetails[0], "food", isFavorite));
   };
 
   const handleFinish = () => {
@@ -142,7 +124,7 @@ function FoodProgress({
               </button>
               <button
                 type="button"
-                onClick={favoriteRecipe}
+                onClick={handleFavorite}
                 className="favorite-btn"
               >
                 {isFavorite && <Icon icon="line-md:heart-filled" />}
@@ -150,13 +132,13 @@ function FoodProgress({
               </button>
             </div>
             <div className="title-and-category">
-              <h2 data-testid="recipe-title">{strMeal}</h2>
-              <h4 data-testid="recipe-category">{strCategory}</h4>
+              <h2>{strMeal}</h2>
+              <h4>{strCategory}</h4>
             </div>
             <div className="ingredients">
               <ul>
                 {foodIngredients.map((ingredient, i) => (
-                  <li key={i} data-testid={`${i}-ingredient-step`}>
+                  <li key={i}>
                     <label htmlFor={`ingredient-${i}`}>
                       <input
                         name={ingredient}
@@ -173,7 +155,7 @@ function FoodProgress({
             </div>
             <div className="instructions">
               <h5>Instructions</h5>
-              <p data-testid="instructions">{strInstructions}</p>
+              <p>{strInstructions}</p>
             </div>
           </div>
         )

@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { Icon } from "@iconify/react";
-import PropTypes from "prop-types";
 import { useHistory } from "react-router-dom";
+import PropTypes from "prop-types";
+import { Icon } from "@iconify/react";
 import lS from "manager-local-storage";
 import { fetchDrinkDetails } from "../../helpers/fetchDrinks";
 import checkLS from "../../helpers/checkLocalStorage";
 import RecommendationCard from "../../components/RecommendationCard";
-import "./styles/DrinkDetails-mobile.css";
 import getIngredients from "../../helpers/getAllIngredients";
 import { getDrinkProgress } from "../../helpers/getRecipeProgress";
 import favoriteRecipe from "../../helpers/favoriteRecipe";
+import "./styles/DrinkDetails.css";
 
 const copy = require("clipboard-copy");
 
@@ -46,7 +46,7 @@ function DrinkDetails({
     };
     getDrinkDetails();
     setStatusRecipe(getDrinkProgress(id));
-  }, []);
+  }, [id]);
 
   const handleShare = () => {
     copy(window.location.href);

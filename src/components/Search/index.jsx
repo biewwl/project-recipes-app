@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import fetchFoods from '../../helpers/fetchFoods';
 import fetchDrinks from '../../helpers/fetchDrinks';
 import RecipesContext from '../../context/RecipesContext';
-import './styles/Search-mobile.css';
+import './styles/Search.css';
 
 function Search() {
   const history = useHistory();

@@ -20,14 +20,12 @@ function DrinksExplore() {
       <article className="drinks-explore">
         <button
           type="button"
-          data-testid="explore-by-ingredient"
           onClick={ () => history.push('/explore/drinks/ingredients') }
         >
           <div className="image-ingredient" />
           <span>By Ingredient</span>
         </button>
         <button
-          data-testid="explore-surprise"
           type="button"
           onClick={ handleRandomDrink }
         >

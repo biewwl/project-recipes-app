@@ -16,7 +16,7 @@ function DoneAndFavoriteRecipes({ page }) {
     const getDoneRecipes = lS("g", "doneRecipes");
     const getFavoriteRecipes = lS("g", "favoriteRecipes");
     setRecipes(page === "done" ? getDoneRecipes : getFavoriteRecipes);
-  }, []);
+  }, [page]);
 
   const handleFilter = ({ target }) => {
     const getDoneRecipes = lS("g", "doneRecipes");

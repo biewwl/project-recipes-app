@@ -6,7 +6,7 @@ import Card from '../../components/Card';
 import fetchIngredients from '../../helpers/fetchIngredients';
 import RecipesContext from '../../context/RecipesContext';
 import fetchDrinks from '../../helpers/fetchDrinks';
-import './styles/DrinksExploreIngredients-mobile.css';
+import './styles/DrinksExploreIngredients.css';
 
 function DrinksExploreIngredients() {
   const [drinkIngredients, setDrinkIngredients] = useState([]);
@@ -26,6 +26,7 @@ function DrinksExploreIngredients() {
     };
     getResults();
   }, []);
+
   return (
     <div>
       <Header title="Explore Ingredients" />
@@ -40,9 +41,6 @@ function DrinksExploreIngredients() {
               key={ `${index}-${name}` }
               img={ image }
               title={ name }
-              index={ index }
-              testid="ingredient-card"
-              titleTestId="card-name"
             />
           </button>
         ))}

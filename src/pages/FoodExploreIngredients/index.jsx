@@ -6,7 +6,7 @@ import Card from '../../components/Card';
 import fetchIngredients from '../../helpers/fetchIngredients';
 import fetchFoods from '../../helpers/fetchFoods';
 import RecipesContext from '../../context/RecipesContext';
-import './styles/FoodExploreIngredients-mobile.css';
+import './styles/FoodExploreIngredients.css';
 
 function FoodExploreIngredients() {
   const [foodIngredients, setFoodIngredients] = useState([]);
