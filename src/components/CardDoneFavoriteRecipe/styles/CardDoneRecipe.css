@@ -1,17 +1,58 @@
 .card-done-recipe {
-  display: flex;
-  justify-content: space-between;
-  margin: 10px;
-  padding: 10px;
-  max-width: 260px;
-  justify-self: center;
   border: 1px solid rgb(230, 230, 230);
   box-shadow: 0 0 5px rgb(230, 230, 230);
+  display: flex;
+  justify-content: space-between;
+  justify-self: center;
+  margin: 10px;
+  max-width: 260px;
+  padding: 10px;
   position: relative;
 }
 
 .card-done-recipe > section {
   width: 100%;
+}
+
+.card-done-recipe a {
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
+  text-decoration: none;
+}
+
+.card-done-recipe a > img {
+  height: 100%;
+  margin-right: 5px;
+  object-fit: cover;
+}
+
+.card-done-recipe a > section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.card-done-recipe a > section span,
+.card-done-recipe a > section h2 {
+  padding: 6px 0;
+}
+
+.card-done-recipe a h2 {
+  color: var(--primaryColor);
+  font-size: 1em;
+  font-weight: 100;
+}
+
+.card-done-recipe .done-favorite-category {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+.card-done-recipe a span {
+  color: #444;
+  font-size: 0.7em;
 }
 
 .tags-section {
@@ -24,64 +65,24 @@
   margin-right: 10px;
 }
 
-.card-done-recipe a {
-  display: flex;
-  flex-direction: column;
-  max-height: 500px;
-  text-decoration: none;
-}
-
-.card-done-recipe a h1 {
-  color: var(--primaryColor);
-  font-size: 1em;
-  font-weight: 100;
-}
-
-.card-done-recipe a span {
-  color: #444;
-  font-size: 0.7em;
-}
-
-.card-done-recipe .done-favorite-category {
-  font-size: 0.8em;
-  font-style: italic;
-}
-
-.card-done-recipe a > section {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 10px 0;
-}
-
-:is(.card-done-recipe a > section) span, h1 {
-  padding: 6px 0;
-}
-
-.card-done-recipe a > img {
-  height: 100%;
-  object-fit: cover;
-  margin-right: 5px;
-}
-
 .card-done-recipe .buttons {
   display: flex;
 }
 
 .card-done-recipe .share-btn, .favorite-btn {
-  color: var(--primaryColor);
-  font-size: 1.2em;
+  align-items: center;
   background: none;
   border: none;
-  margin-right: 5px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 5px;
-  width: 50%;
+  color: var(--primaryColor);
   cursor: pointer;
   display: flex;
+  font-size: 1.2em;
   justify-content: center;
-  align-items: center;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  margin-top: 10px;
+  padding: 5px;
+  width: 50%;
 }
 
 .card-done-recipe .share-btn span {
@@ -89,7 +90,7 @@
 }
 
 .card-done-recipe .favorite-btn {
-  margin-right: 0;
-  margin-left: 5px;
   color: var(--redSecondary);
+  margin-left: 5px;
+  margin-right: 0;
 }

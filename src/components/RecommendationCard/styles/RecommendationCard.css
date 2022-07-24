@@ -3,33 +3,11 @@
   flex-direction: column;
   flex-wrap: wrap;
   margin: 10px 0;
+  max-height: 400px;
   overflow-x: scroll;
   width: 100%;
-  max-height: 400px;
 }
 
 .recommendation-card a {
   text-decoration: none;
-}
-
-.recommendation-card .card {
-  border-radius: 1em;
-  box-shadow: 0 0 3px #c6c6c6;
-  margin: 2.5vw;
-  width: 45vw;
-  max-width: 200px;
-}
-
-.recommendation-card .card img {
-  border-radius: 1em;
-  width: 100%;
-}
-
-.recommendation-card .card h5 {
-  color: #444;
-  overflow: hidden;
-  padding: 10px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 100%;
 }

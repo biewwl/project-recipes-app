@@ -1,10 +1,10 @@
 .search {
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
   margin: 10px 0;
-  width: 100%;
   padding: 10px 20px;
-  align-items: flex-start;
+  width: 100%;
 }
 
 .search input {
@@ -15,19 +15,19 @@
   padding: 8px;
 }
 
-.search input [type="radio"] {
+.search input [ type = "radio" ] {
   margin-right: 5px;
+}
+
+.search input:focus {
+  border: 1px solid var(--primaryColor);
+  outline: none;
 }
 
 .search label {
   align-items: center;
   display: flex;
   font-size: 0.8em;
-}
-
-.search input:focus {
-  border: 1px solid var(--primaryColor);
-  outline: none;
 }
 
 .search button {

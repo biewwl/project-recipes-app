@@ -1,10 +1,10 @@
 header {
-  justify-content: space-between;
   background-color: var(--secondaryColor);
   display: flex;
   font-weight: 100;
   grid-template-columns: 1fr repeat(2, 40px);
   height: auto;
+  justify-content: space-between;
   padding: 15px 20px;
   position: fixed;
   top: 0;
@@ -15,10 +15,16 @@ header {
 header .profile-button {
   background: none;
   border: none;
-  justify-self: flex-end;
-  padding: 0 10px;
   cursor: pointer;
+  justify-self: flex-end;
   order: 3;
+  padding: 0 10px;
+}
+
+header .profile-button svg,
+header .search-button svg {
+  color: white;
+  font-size: 1.3em;
 }
 
 header h1 {
@@ -26,11 +32,11 @@ header h1 {
 }
 
 header span {
+  align-items: center;
   align-self: center;
   color: white;
-  font-size: 1.15em;
   display: flex;
-  align-items: center;
+  font-size: 1.15em;
   font-weight: 100;
   width: 90%;
 }
@@ -40,16 +46,10 @@ header span svg {
   margin-inline-end: 10px;
 }
 
-header .profile-button svg,
-header .search-button svg {
-  font-size: 1.3em;
-  color: white;
-}
-
 header .search-button {
   background: none;
   border: none;
+  cursor: pointer;
   justify-self: flex-end;
   padding: 0 10px;
-  cursor: pointer;
 }

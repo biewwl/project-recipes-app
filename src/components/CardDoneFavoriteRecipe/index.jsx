@@ -50,9 +50,9 @@ function CardDoneFavoriteRecipe({
     <section className="card-done-recipe">
       <section>
         <Link to={type === "food" ? `/foods/${id}` : `/drinks/${id}`}>
-          <img src={image} alt="" />
+          <img src={image} alt={name} />
           <section>
-            <h1>{name}</h1>
+            <h2>{name}</h2>
             <span className="done-favorite-category">
               {type === "food"
                 ? `${nationality} - ${category}`
